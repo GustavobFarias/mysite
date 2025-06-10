@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# Define as opções de status da postagem: 0 para rascunho, 1 para publicado
 STATUS = (
     (0, 'Draft'),
     (1, 'Publish')
 )
 
-
+# Modelo que representa uma postagem de blog
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
