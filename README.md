@@ -7,4 +7,5 @@ Se estiver usando **Poetry**:
 
 ```bash
 poetry install
-poetry shell
+python manage.py migrate
+python manage.py runserver
