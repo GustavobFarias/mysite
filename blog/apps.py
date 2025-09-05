@@ -5,5 +5,4 @@ class BlogConfig(AppConfig):
     name = 'blog'
 
     def ready(self):
-        from .create_sample_post import create_sample_post
-        create_sample_post()
+        import blog.signals
